@@ -1,3 +1,4 @@
+alert("The part with JS Homework you can see on this page, please, press F12")
 console.log("First Part JS Homework")
 function counter (value) 
     {
