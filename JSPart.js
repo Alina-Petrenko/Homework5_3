@@ -5,7 +5,7 @@ function counter (value)
         counter = function() 
         {     
             let arg;      
-            if (arguments[0])
+            if (arguments.length > 0)
                 {
                     arg = arguments[0];
                     return newValue = newValue + arg;
@@ -24,30 +24,32 @@ function counter (value)
 
 console.log("Second Part JS Homework")
 
-function getUpdatedArr(value) 
-    {     
-  
-        let i = 0;
-        let arg = [];
-        getUpdatedArr = function() 
-            { 
-                if (value)
-                {    
-                    arg[i] = value;
-                    i++;            
-                    return arg; 
-                }
-                else
+function getUpdatedArr() 
+    {    
+        let arg = []; 
+        return getUpdatedArr = function() 
+            {   
+              if (arguments.length > 0)
+              {
+                for (let i of arguments)      
                 {
-                  return arg = [];
-                }                
+                        arg.push(i)
+                        return arg;  
+                }   
+              }
+              else
+              {
+                arg = [];
+                return arg;
+              } 
+                
             };
-        return getUpdatedArr();
     }
+    let a = getUpdatedArr();
          
-    console.log(getUpdatedArr(3));
-    console.log(getUpdatedArr(5));
-    console.log(getUpdatedArr(6));
-    console.log(getUpdatedArr());
-    console.log(getUpdatedArr(2));
+    console.log(a(3));
+    console.log(a(5));
+    console.log(a(6));
+    console.log(a());
+    console.log(a(2));
 
