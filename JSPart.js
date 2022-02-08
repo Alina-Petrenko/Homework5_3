@@ -1,4 +1,3 @@
-alert("The part with JS Homework you can see on this page, please, press F12")
 console.log("First Part JS Homework")
 function counter (value) 
     {
@@ -49,7 +48,7 @@ function getUpdatedArr()
 
 let a = getUpdatedArr();         
 console.log(a(3));
-console.log(a(5));
+console.log(a({name: 'Vasya'}));
 console.log(a(6));
 console.log(a());
 console.log(a(2));
